@@ -203,3 +203,25 @@ if self.free_channels:
     reply_str = f"REQ{assigned_ch}_{sensor_id}"
     self._send_reply(reply_str)
 ```
+
+
+[#] Parser Seriale CAN avviato su /dev/ttyACM0
+[1] SENSORE 1 f -4167000.0 CCA libero - TX REQ 1/5
+[1] SENSORE 1 f -4167000.0 CCA libero - TX REQ 2/5
+[1] HUB ricevuto: REQ_1
+[2] HUB assegnazione: REQ3_1
+[1] SENSORE 1 f -4167000.0 CCA libero - TX REQ 3/5
+[1] HUB ricevuto: REQ_1
+[RE-TX] HUB ripropone REQ3_1 per ID 1
+[2] SENSORE 1 RX VALIDO: REQ3_1
+[3] SENSORE 1 SALTO su f-833000.0
+[4] SENSORE 1 f 833000.0 TX raw [0, 86, 4, 34, 51, 68, 0]
+HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
+[4] SENSORE 1 f 833000.0 TX raw [0, 86, 4, 34, 51, 68, 0]
+HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
+[4] SENSORE 1 f 833000.0 TX raw [0, 86, 4, 34, 51, 68, 0]
+HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
+[4] SENSORE 1 f 833000.0 TX raw [0, 86, 4, 34, 51, 68, 0]
+HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
+[4] SENSORE 1 f 833000.0 TX raw [0, 35, 4, 1, 2, 3, 0]
+HUB parser CH3 raw : [0, 35, 4, 1, 2, 3, 0]
