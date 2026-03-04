@@ -1,0 +1,1424 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: Custom
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: wifi_tx
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: run
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: ''
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 12]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: ID
+  id: variable
+  parameters:
+    comment: ''
+    value: '0x01'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 12.0]
+    rotation: 0
+    state: enabled
+- name: freq
+  id: variable_qtgui_chooser
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    label0: ''
+    label1: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    labels: '[''  1 | 2412.0 | 11g'', ''  2 | 2417.0 | 11g'', ''  3 | 2422.0 | 11g'',
+      ''  4 | 2427.0 | 11g'', ''  5 | 2432.0 | 11g'', ''  6 | 2437.0 | 11g'', ''  7
+      | 2442.0 | 11g'', ''  8 | 2447.0 | 11g'', ''  9 | 2452.0 | 11g'', '' 10 | 2457.0
+      | 11g'', '' 11 | 2462.0 | 11g'', '' 12 | 2467.0 | 11g'', '' 13 | 2472.0 | 11g'',
+      '' 14 | 2484.0 | 11g'', '' 34 | 5170.0 | 11a'', '' 36 | 5180.0 | 11a'', '' 38
+      | 5190.0 | 11a'', '' 40 | 5200.0 | 11a'', '' 42 | 5210.0 | 11a'', '' 44 | 5220.0
+      | 11a'', '' 46 | 5230.0 | 11a'', '' 48 | 5240.0 | 11a'', '' 50 | 5250.0 | 11a'',
+      '' 52 | 5260.0 | 11a'', '' 54 | 5270.0 | 11a'', '' 56 | 5280.0 | 11a'', '' 58
+      | 5290.0 | 11a'', '' 60 | 5300.0 | 11a'', '' 62 | 5310.0 | 11a'', '' 64 | 5320.0
+      | 11a'', ''100 | 5500.0 | 11a'', ''102 | 5510.0 | 11a'', ''104 | 5520.0 | 11a'',
+      ''106 | 5530.0 | 11a'', ''108 | 5540.0 | 11a'', ''110 | 5550.0 | 11a'', ''112
+      | 5560.0 | 11a'', ''114 | 5570.0 | 11a'', ''116 | 5580.0 | 11a'', ''118 | 5590.0
+      | 11a'', ''120 | 5600.0 | 11a'', ''122 | 5610.0 | 11a'', ''124 | 5620.0 | 11a'',
+      ''126 | 5630.0 | 11a'', ''128 | 5640.0 | 11a'', ''132 | 5660.0 | 11a'', ''134
+      | 5670.0 | 11a'', ''136 | 5680.0 | 11a'', ''138 | 5690.0 | 11a'', ''140 | 5700.0
+      | 11a'', ''142 | 5710.0 | 11a'', ''144 | 5720.0 | 11a'', ''149 | 5745.0 | 11a
+      (SRD)'', ''151 | 5755.0 | 11a (SRD)'', ''153 | 5765.0 | 11a (SRD)'', ''155 |
+      5775.0 | 11a (SRD)'', ''157 | 5785.0 | 11a (SRD)'', ''159 | 5795.0 | 11a (SRD)'',
+      ''161 | 5805.0 | 11a (SRD)'', ''165 | 5825.0 | 11a (SRD)'', ''172 | 5860.0 |
+      11p'', ''174 | 5870.0 | 11p'', ''176 | 5880.0 | 11p'', ''178 | 5890.0 | 11p'',
+      ''180 | 5900.0 | 11p'', ''182 | 5910.0 | 11p'', ''184 | 5920.0 | 11p'']'
+    num_opts: '0'
+    option0: '0'
+    option1: '1'
+    option2: '2'
+    option3: '3'
+    option4: '4'
+    options: '[2412000000.0, 2417000000.0, 2422000000.0, 2427000000.0, 2432000000.0,
+      2437000000.0, 2442000000.0, 2447000000.0, 2452000000.0, 2457000000.0, 2462000000.0,
+      2467000000.0, 2472000000.0, 2484000000.0, 5170000000.0, 5180000000.0, 5190000000.0,
+      5200000000.0, 5210000000.0, 5220000000.0, 5230000000.0, 5240000000.0, 5250000000.0,
+      5260000000.0, 5270000000.0, 5280000000.0, 5290000000.0, 5300000000.0, 5310000000.0,
+      5320000000.0, 5500000000.0, 5510000000.0, 5520000000.0, 5530000000.0, 5540000000.0,
+      5550000000.0, 5560000000.0, 5570000000.0, 5580000000.0, 5590000000.0, 5600000000.0,
+      5610000000.0, 5620000000.0, 5630000000.0, 5640000000.0, 5660000000.0, 5670000000.0,
+      5680000000.0, 5690000000.0, 5700000000.0, 5710000000.0, 5720000000.0, 5745000000.0,
+      5755000000.0, 5765000000.0, 5775000000.0, 5785000000.0, 5795000000.0, 5805000000.0,
+      5825000000.0, 5860000000.0, 5870000000.0, 5880000000.0, 5890000000.0, 5900000000.0,
+      5910000000.0, 5920000000.0]'
+    orient: Qt.QVBoxLayout
+    type: real
+    value: '5890000000'
+    widget: combo_box
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [776, 12.0]
+    rotation: 0
+    state: enabled
+- name: out_buf_size
+  id: variable
+  parameters:
+    comment: ''
+    value: '128000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 76.0]
+    rotation: 0
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: 10e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 12.0]
+    rotation: 0
+    state: true
+- name: setup_ch_f
+  id: variable
+  parameters:
+    comment: ''
+    value: 4.167e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [272, 12.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_mag_squared_0
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [720, 184.0]
+    rotation: 180
+    state: true
+- name: blocks_moving_average_xx_0
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: '100'
+    max_iter: '400'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [528, 156.0]
+    rotation: 180
+    state: true
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 1168.0]
+    rotation: 180
+    state: true
+- name: blocks_null_sink_0_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 1392.0]
+    rotation: 180
+    state: true
+- name: blocks_null_sink_0_0_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 1616.0]
+    rotation: 180
+    state: true
+- name: blocks_null_sink_0_1
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 1280.0]
+    rotation: 180
+    state: true
+- name: blocks_null_sink_0_1_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 1504.0]
+    rotation: 180
+    state: true
+- name: blocks_threshold_ff_0
+  id: blocks_threshold_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    high: '5'
+    init: '0'
+    low: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 164.0]
+    rotation: 180
+    state: true
+- name: blocks_throttle_0
+  id: blocks_throttle
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1796.0, 680]
+    rotation: 270
+    state: true
+- name: channels_channel_model_0
+  id: channels_channel_model
+  parameters:
+    affinity: ''
+    alias: ''
+    block_tags: 'False'
+    comment: ''
+    epsilon: '1.0'
+    freq_offset: '0.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_voltage: '0'
+    seed: '0'
+    taps: 1.0 + 1.0j
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1312, 596.0]
+    rotation: 0
+    state: true
+- name: channels_channel_model_0_0
+  id: channels_channel_model
+  parameters:
+    affinity: ''
+    alias: ''
+    block_tags: 'False'
+    comment: ''
+    epsilon: '1.0'
+    freq_offset: '0.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_voltage: '0'
+    seed: '0'
+    taps: 1.0 + 1.0j
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1128, 2156.0]
+    rotation: 0
+    state: true
+- name: epy_block_0
+  id: epy_block
+  parameters:
+    _source_code: "import threading\nimport serial\nimport pmt\nimport time\nfrom\
+      \ gnuradio import gr\n\nclass serial_can_dlc_parser(gr.sync_block):\n    def\
+      \ __init__(self, port='/dev/ttyACM0', baudrate=115200):\n        gr.sync_block.__init__(\n\
+      \            self, \n            name=\"Serial CAN DLC Parser\", \n        \
+      \    in_sig=None, \n            out_sig=None\n        )\n        self.message_port_register_out(pmt.intern(\"\
+      out\"))\n        self.port = port\n        self.baudrate = baudrate\n      \
+      \  self.ser = None\n        self.running = False\n        self.packet_buffer\
+      \ = bytearray()\n        \n        self.START_BYTE = 0x24\n        self.TERMINATOR\
+      \ = 0x0A\n\n    def start(self):\n        try:\n            self.ser = serial.Serial(self.port,\
+      \ self.baudrate, timeout=0)\n            self.running = True\n            self.thread\
+      \ = threading.Thread(target=self.run_loop, daemon=True)\n            self.thread.start()\n\
+      \            print(f\"[#] Parser Seriale CAN avviato su {self.port}\")\n   \
+      \         return True\n        except Exception as e:\n            print(f\"\
+      [!] Errore apertura seriale: {e}\")\n            return False\n\n    def run_loop(self):\n\
+      \        while self.running:\n            if self.ser and self.ser.in_waiting\
+      \ > 0:\n                self.packet_buffer.extend(self.ser.read(self.ser.in_waiting))\n\
+      \                \n                while len(self.packet_buffer) >= 5: \n  \
+      \                  if self.packet_buffer[0] != self.START_BYTE:\n          \
+      \              self.packet_buffer.pop(0)\n                        continue\n\
+      \                    \n                    dlc = self.packet_buffer[3]\n   \
+      \                 expected_len = 5 + dlc\n                    \n           \
+      \         if len(self.packet_buffer) >= expected_len:\n                    \
+      \    if self.packet_buffer[expected_len - 1] == self.TERMINATOR:\n         \
+      \                   # Estrazione payload escluso start byte [0] e terminatore\
+      \ [end]\n                            frame = list(self.packet_buffer[1:expected_len\
+      \ - 1])\n                            \n                            msg = pmt.init_u8vector(len(frame),\
+      \ frame)\n                            self.message_port_pub(pmt.intern(\"out\"\
+      ), msg)\n                            \n                            self.packet_buffer\
+      \ = self.packet_buffer[expected_len:]\n                        else:\n     \
+      \                       self.packet_buffer.pop(0)\n                    else:\n\
+      \                        break\n            \n            time.sleep(0.001)\n\
+      \n    def stop(self):\n        self.running = False\n        if self.ser: \n\
+      \            self.ser.close()\n        return True\n\n    def work(self, input_items,\
+      \ output_items):\n        return 0\n"
+    affinity: ''
+    alias: ''
+    baudrate: '9600'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    port: '''/dev/ttyACM0'''
+  states:
+    _io_cache: ('Serial CAN DLC Parser', 'serial_can_dlc_parser', [('port', "'/dev/ttyACM0'"),
+      ('baudrate', '115200')], [], [('out', 'message', 1)], '', ['baudrate', 'port'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 324.0]
+    rotation: 0
+    state: true
+- name: epy_block_1_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport pmt\nimport\
+      \ time\n\nclass pdu_req_reply(gr.basic_block):\n    def __init__(self, initial_free_channels=[1,\
+      \ 2, 3, 4, 5], assignment_cooldown=5.0):\n        gr.basic_block.__init__(\n\
+      \            self,\n            name=\"HUB_Controller\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"pdu_out\"))\n\
+      \        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_msg)\n   \
+      \     \n        self.free_channels = list(initial_free_channels)\n        \n\
+      \        # Dizionario per memorizzare assegnazioni attive: {ID_SENSORE: (CANALE,\
+      \ TIMESTAMP)}\n        self.active_assignments = {}\n        self.cooldown =\
+      \ assignment_cooldown\n\n    def handle_msg(self, msg):\n        data_pmt =\
+      \ pmt.cdr(msg)\n        if pmt.is_u8vector(data_pmt):\n            payload_bytes\
+      \ = pmt.u8vector_elements(data_pmt)\n            if len(payload_bytes) > 24:\n\
+      \                try:\n                    # Decodifica latin-1 per compatibilit\xE0\
+      \ con il range 0-255\n                    decoded_str = bytes(payload_bytes[24:]).decode('latin-1').strip()\n\
+      \                    \n                    if decoded_str.startswith(\"REQ\"\
+      ):\n                        print(f\"[1] HUB ricevuto: {decoded_str}\")\n  \
+      \                      \n                        # Estrazione ID (es: da \"\
+      REQ_1\" estrae \"1\")\n                        parts = decoded_str.split('_')\n\
+      \                        sensor_id = parts[1] if len(parts) > 1 else \"0\"\n\
+      \                        \n                        now = time.time()\n     \
+      \                   \n                        # LOGICA ANTI-BURN: Se il sensore\
+      \ ha gi\xE0 un canale assegnato recentemente,\n                        # riproponiamo\
+      \ lo stesso senza estrarne uno nuovo dalla lista.\n                        if\
+      \ sensor_id in self.active_assignments:\n                            assigned_ch,\
+      \ last_time = self.active_assignments[sensor_id]\n                         \
+      \   if (now - last_time) < self.cooldown:\n                                reply_str\
+      \ = f\"REQ{assigned_ch}_{sensor_id}\"\n                                print(f\"\
+      [RE-TX] HUB ripropone {reply_str} per ID {sensor_id}\")\n                  \
+      \              self._send_reply(reply_str)\n                               \
+      \ return\n\n                        # NUOVA ASSEGNAZIONE\n                 \
+      \       if self.free_channels:\n                            assigned_ch = self.free_channels.pop(0)\n\
+      \                            self.active_assignments[sensor_id] = (assigned_ch,\
+      \ now)\n                            \n                            reply_str\
+      \ = f\"REQ{assigned_ch}_{sensor_id}\"\n                            print(f\"\
+      [2] HUB assegnazione: {reply_str}\")\n                            self._send_reply(reply_str)\n\
+      \                        else:\n                            print(f\"[!] HUB\
+      \ canali occupati (richiesta da ID {sensor_id})\")\n                       \
+      \     \n                except Exception as e:\n                    print(f\"\
+      Errore HUB: {e}\")\n\n    def _send_reply(self, reply_str):\n        \"\"\"\
+      Helper per inviare la PDU di risposta\"\"\"\n        reply_payload = reply_str.encode('latin-1')\n\
+      \        meta = pmt.make_dict()\n        data = pmt.init_u8vector(len(reply_payload),\
+      \ list(reply_payload))\n        self.message_port_pub(pmt.intern(\"pdu_out\"\
+      ), pmt.cons(meta, data))\n"
+    affinity: ''
+    alias: ''
+    assignment_cooldown: '1000'
+    comment: ''
+    initial_free_channels: '[ 3]'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('HUB_Controller', 'pdu_req_reply', [('initial_free_channels', '[1,
+      2, 3, 4, 5]'), ('assignment_cooldown', '5.0')], [('pdu_in', 'message', 1)],
+      [('pdu_out', 'message', 1)], '', [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [112, 2052.0]
+    rotation: 180
+    state: true
+- name: epy_block_1_0_0
+  id: epy_block
+  parameters:
+    _source_code: "import threading\nimport time\nimport pmt\nimport random\nimport\
+      \ numpy as np\nfrom gnuradio import gr\n\nclass sensor_controller(gr.sync_block):\n\
+      \    def __init__(self, sensor_id=1, max_backoff_ms=500, max_retries=5, retry_delay_ms=2000,\
+      \ max_backoff_attempts=10):\n        gr.sync_block.__init__(\n            self,\
+      \ \n            name='Sensor State Controller', \n            in_sig=[np.float32],\
+      \ \n            out_sig=None\n        )\n        \n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_in(pmt.intern(\"payload_in\"\
+      ))\n        self.message_port_register_out(pmt.intern(\"pdu_out\"))\n      \
+      \  self.message_port_register_out(pmt.intern(\"freq_out\"))\n        \n    \
+      \    self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n       \
+      \ self.set_msg_handler(pmt.intern(\"payload_in\"), self.handle_payload)\n  \
+      \      \n        self.sensor_id = sensor_id\n        self.max_backoff_ms = max_backoff_ms\n\
+      \        self.max_retries = max_retries\n        self.retry_delay_ms = retry_delay_ms\n\
+      \        self.max_backoff_attempts = max_backoff_attempts\n        \n      \
+      \  self.settling_time = 0.05\n        self.guard_interval = 0.5\n        \n\
+      \        self.offsets = [-4.167e6, -2.500e6, -0.833e6, 0.833e6, 2.500e6, 4.167e6]\n\
+      \        self.current_channel = 0\n        self.current_state = \"REQ\"\n  \
+      \      self.req_attempts = 0\n        self.backoff_attempts = 0\n        \n\
+      \        self.channel_is_free = True \n        self.last_sample_time = time.time()\n\
+      \        self.running = False\n        self.thread = None\n\n    def start(self):\n\
+      \        self.running = True\n        self.thread = threading.Thread(target=self.run_loop)\n\
+      \        self.thread.start()\n        return True\n\n    def stop(self):\n \
+      \       self.running = False\n        if self.thread is not None:\n        \
+      \    self.thread.join()\n        return True\n\n    def work(self, input_items,\
+      \ output_items):\n        if len(input_items[0]) > 0:\n            valore_grezzo\
+      \ = input_items[0][-1]\n            self.channel_is_free = (valore_grezzo <\
+      \ 0.5)\n            self.last_sample_time = time.time() \n        return len(input_items[0])\n\
+      \n    def handle_payload(self, msg):\n        # Fase di negoziazione: blocco\
+      \ trasmissione dati se non in stato SIG\n        if self.current_state != \"\
+      SIG\":\n            return\n\n        if pmt.is_u8vector(msg):\n           \
+      \ raw_payload = list(pmt.u8vector_elements(msg))\n            offset = self.offsets[self.current_channel]\n\
+      \            print(f\"[4] SENSORE {self.sensor_id} f {offset} TX raw {raw_payload}\"\
+      )\n            \n            meta = pmt.make_dict()\n            data = pmt.init_u8vector(len(raw_payload),\
+      \ raw_payload)\n            self.message_port_pub(pmt.intern(\"pdu_out\"), pmt.cons(meta,\
+      \ data))\n\n    def handle_pdu(self, msg):\n        # Pulizia REQ: ignora risposte\
+      \ HUB se la negoziazione \xE8 gi\xE0 conclusa\n        if self.current_state\
+      \ != \"REQ\":\n            return\n\n        data_pmt = pmt.cdr(msg)\n     \
+      \   if pmt.is_u8vector(data_pmt):\n            payload_bytes = pmt.u8vector_elements(data_pmt)\n\
+      \            if len(payload_bytes) > 24:\n                try:\n           \
+      \         decoded_str = bytes(payload_bytes[24:]).decode('latin-1').strip()\n\
+      \                    \n                    if decoded_str.startswith(\"REQ\"\
+      ) and f\"_{self.sensor_id}\" in decoded_str:\n                        ch_part\
+      \ = decoded_str.split('_')[0]\n                        ch_str = \"\".join(filter(str.isdigit,\
+      \ ch_part))\n                        \n                        if ch_str:\n\
+      \                            ch_index = int(ch_str)\n                      \
+      \      if 0 <= ch_index < len(self.offsets):\n                             \
+      \   current_freq = self.offsets[self.current_channel]\n                    \
+      \            freq_target = self.offsets[ch_index]\n                        \
+      \        \n                                print(f\"[2] SENSORE {self.sensor_id}\
+      \ RX VALIDO: {decoded_str}\")\n                                print(f\"[3]\
+      \ SENSORE {self.sensor_id} SALTO su f-{freq_target}\")\n                   \
+      \             \n                                # Transizione di stato atomica\n\
+      \                                self.current_channel = ch_index\n         \
+      \                       self.current_state = \"SIG\"\n                     \
+      \           time.sleep(self.guard_interval)\n                except Exception\
+      \ as e:\n                    print(f\"Errore handle_pdu: {e}\")\n\n    def run_loop(self):\n\
+      \        while self.running:\n            offset = self.offsets[self.current_channel]\n\
+      \            msg_freq = pmt.cons(pmt.intern(\"freq\"), pmt.from_double(offset))\n\
+      \            self.message_port_pub(pmt.intern(\"freq_out\"), msg_freq)\n   \
+      \         \n            time.sleep(self.settling_time)\n\n            if (time.time()\
+      \ - self.last_sample_time) > 0.1:\n                self.channel_is_free = True\n\
+      \n            if self.current_state == \"REQ\":\n                if self.req_attempts\
+      \ >= self.max_retries:\n                    print(f\"[!] SENSORE {self.sensor_id}\
+      \ f {offset} ERRORE - REQ max\")\n                    self.current_state = \"\
+      ERROR\"\n                    continue\n\n                if self.channel_is_free:\n\
+      \                    self.req_attempts += 1\n                    self.backoff_attempts\
+      \ = 0 \n                    print(f\"[1] SENSORE {self.sensor_id} f {offset}\
+      \ CCA libero - TX REQ {self.req_attempts}/{self.max_retries}\")\n          \
+      \          \n                    req_msg = f\"REQ_{self.sensor_id}\"\n     \
+      \               raw_payload = list(req_msg.encode('utf-8'))\n              \
+      \      \n                    meta = pmt.make_dict()\n                    data\
+      \ = pmt.init_u8vector(len(raw_payload), raw_payload)\n                    self.message_port_pub(pmt.intern(\"\
+      pdu_out\"), pmt.cons(meta, data))\n                    time.sleep(self.retry_delay_ms\
+      \ / 1000.0)\n                else:\n                    if self.backoff_attempts\
+      \ >= self.max_backoff_attempts:\n                        self.current_state\
+      \ = \"ERROR\"\n                        continue\n                    self.backoff_attempts\
+      \ += 1\n                    backoff = random.uniform(0, self.max_backoff_ms)\n\
+      \                    print(f\"[0] SENSORE {self.sensor_id} f {offset} CCA occupato\
+      \ - Backoff {self.backoff_attempts}: {backoff:.0f} ms\")\n                 \
+      \   time.sleep(backoff / 1000.0)\n            \n            elif self.current_state\
+      \ == \"SIG\":\n                time.sleep(0.1)\n            elif self.current_state\
+      \ == \"ERROR\":\n                time.sleep(1.0)\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    max_backoff_attempts: '2'
+    max_backoff_ms: '50'
+    max_retries: '5'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    retry_delay_ms: '1000'
+    sensor_id: ID
+  states:
+    _io_cache: ('Sensor State Controller', 'sensor_controller', [('sensor_id', '1'),
+      ('max_backoff_ms', '500'), ('max_retries', '5'), ('retry_delay_ms', '2000'),
+      ('max_backoff_attempts', '10')], [('0', 'float', 1), ('pdu_in', 'message', 1),
+      ('payload_in', 'message', 1)], [('freq_out', 'message', 1), ('pdu_out', 'message',
+      1)], '', ['max_backoff_attempts', 'max_backoff_ms', 'max_retries', 'retry_delay_ms',
+      'sensor_id'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 268.0]
+    rotation: 0
+    state: true
+- name: epy_block_1_2_1_0_0
+  id: epy_block
+  parameters:
+    _source_code: "import pmt\nfrom gnuradio import gr\n\nclass pdu_payload_parser(gr.sync_block):\n\
+      \    def __init__(self, header_len=24, channel = 1):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"PDU Payload Parser\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"payload_out\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n\
+      \        self.header_len = header_len\n        self.channel = channel\n\n  \
+      \  def handle_pdu(self, msg):\n        # Estrazione del vettore dati (cdr) dalla\
+      \ PDU ricevuta\n        data_pmt = pmt.cdr(msg)\n        \n        if pmt.is_u8vector(data_pmt):\n\
+      \            payload_bytes = pmt.u8vector_elements(data_pmt)\n            \n\
+      \            # Controllo lunghezza: deve contenere almeno l'header (24 byte)\n\
+      \            if len(payload_bytes) > self.header_len:\n                try:\n\
+      \                    # Parsing logico: isola la parte utile dal byte 24 in poi\n\
+      \                    raw_payload = payload_bytes[self.header_len:]\n       \
+      \             \n                    print(f\"HUB parser CH{self.channel} raw\
+      \ : {list(raw_payload)}\")\n                    # Costruzione PDU di uscita\
+      \ (solo payload)\n                    meta = pmt.make_dict()\n             \
+      \       data = pmt.init_u8vector(len(raw_payload), list(raw_payload))\n    \
+      \                \n                    # Pubblicazione del messaggio sulla porta\
+      \ out\n                    self.message_port_pub(pmt.intern(\"payload_out\"\
+      ), pmt.cons(meta, data))\n                        \n                except Exception\
+      \ as e:\n                    print(f\"errore parser: {e}\")\n              \
+      \      pass\n\n    def work(self, input_items, output_items):\n        return\
+      \ 0\n"
+    affinity: ''
+    alias: ''
+    channel: '3'
+    comment: ''
+    header_len: '24'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('PDU Payload Parser', 'pdu_payload_parser', [('header_len', '24'),
+      ('channel', '1')], [('pdu_in', 'message', 1)], [('payload_out', 'message', 1)],
+      '', ['channel', 'header_len'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 1444.0]
+    rotation: 180
+    state: true
+- name: epy_block_1_2_1_0_0_0
+  id: epy_block
+  parameters:
+    _source_code: "import pmt\nfrom gnuradio import gr\n\nclass pdu_payload_parser(gr.sync_block):\n\
+      \    def __init__(self, header_len=24, channel = 1):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"PDU Payload Parser\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"payload_out\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n\
+      \        self.header_len = header_len\n        self.channel = channel\n\n  \
+      \  def handle_pdu(self, msg):\n        # Estrazione del vettore dati (cdr) dalla\
+      \ PDU ricevuta\n        data_pmt = pmt.cdr(msg)\n        \n        if pmt.is_u8vector(data_pmt):\n\
+      \            payload_bytes = pmt.u8vector_elements(data_pmt)\n            \n\
+      \            # Controllo lunghezza: deve contenere almeno l'header (24 byte)\n\
+      \            if len(payload_bytes) > self.header_len:\n                try:\n\
+      \                    # Parsing logico: isola la parte utile dal byte 24 in poi\n\
+      \                    raw_payload = payload_bytes[self.header_len:]\n       \
+      \             \n                    print(f\"HUB parser CH{self.channel} raw\
+      \ : {list(raw_payload)}\")\n                    # Costruzione PDU di uscita\
+      \ (solo payload)\n                    meta = pmt.make_dict()\n             \
+      \       data = pmt.init_u8vector(len(raw_payload), list(raw_payload))\n    \
+      \                \n                    # Pubblicazione del messaggio sulla porta\
+      \ out\n                    self.message_port_pub(pmt.intern(\"payload_out\"\
+      ), pmt.cons(meta, data))\n                        \n                except Exception\
+      \ as e:\n                    print(f\"errore parser: {e}\")\n              \
+      \      pass\n\n    def work(self, input_items, output_items):\n        return\
+      \ 0\n"
+    affinity: ''
+    alias: ''
+    channel: '2'
+    comment: ''
+    header_len: '24'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('PDU Payload Parser', 'pdu_payload_parser', [('header_len', '24'),
+      ('channel', '1')], [('pdu_in', 'message', 1)], [('payload_out', 'message', 1)],
+      '', ['channel', 'header_len'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 1332.0]
+    rotation: 180
+    state: true
+- name: epy_block_1_2_1_0_0_1
+  id: epy_block
+  parameters:
+    _source_code: "import pmt\nfrom gnuradio import gr\n\nclass pdu_payload_parser(gr.sync_block):\n\
+      \    def __init__(self, header_len=24, channel = 1):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"PDU Payload Parser\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"payload_out\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n\
+      \        self.header_len = header_len\n        self.channel = channel\n\n  \
+      \  def handle_pdu(self, msg):\n        # Estrazione del vettore dati (cdr) dalla\
+      \ PDU ricevuta\n        data_pmt = pmt.cdr(msg)\n        \n        if pmt.is_u8vector(data_pmt):\n\
+      \            payload_bytes = pmt.u8vector_elements(data_pmt)\n            \n\
+      \            # Controllo lunghezza: deve contenere almeno l'header (24 byte)\n\
+      \            if len(payload_bytes) > self.header_len:\n                try:\n\
+      \                    # Parsing logico: isola la parte utile dal byte 24 in poi\n\
+      \                    raw_payload = payload_bytes[self.header_len:]\n       \
+      \             \n                    print(f\"HUB parser CH{self.channel} raw\
+      \ : {list(raw_payload)}\")\n                    # Costruzione PDU di uscita\
+      \ (solo payload)\n                    meta = pmt.make_dict()\n             \
+      \       data = pmt.init_u8vector(len(raw_payload), list(raw_payload))\n    \
+      \                \n                    # Pubblicazione del messaggio sulla porta\
+      \ out\n                    self.message_port_pub(pmt.intern(\"payload_out\"\
+      ), pmt.cons(meta, data))\n                        \n                except Exception\
+      \ as e:\n                    print(f\"errore parser: {e}\")\n              \
+      \      pass\n\n    def work(self, input_items, output_items):\n        return\
+      \ 0\n"
+    affinity: ''
+    alias: ''
+    channel: '1'
+    comment: ''
+    header_len: '24'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('PDU Payload Parser', 'pdu_payload_parser', [('header_len', '24'),
+      ('channel', '1')], [('pdu_in', 'message', 1)], [('payload_out', 'message', 1)],
+      '', ['channel', 'header_len'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 1220.0]
+    rotation: 180
+    state: true
+- name: epy_block_1_2_1_0_0_2
+  id: epy_block
+  parameters:
+    _source_code: "import pmt\nfrom gnuradio import gr\n\nclass pdu_payload_parser(gr.sync_block):\n\
+      \    def __init__(self, header_len=24, channel = 1):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"PDU Payload Parser\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"payload_out\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n\
+      \        self.header_len = header_len\n        self.channel = channel\n\n  \
+      \  def handle_pdu(self, msg):\n        # Estrazione del vettore dati (cdr) dalla\
+      \ PDU ricevuta\n        data_pmt = pmt.cdr(msg)\n        \n        if pmt.is_u8vector(data_pmt):\n\
+      \            payload_bytes = pmt.u8vector_elements(data_pmt)\n            \n\
+      \            # Controllo lunghezza: deve contenere almeno l'header (24 byte)\n\
+      \            if len(payload_bytes) > self.header_len:\n                try:\n\
+      \                    # Parsing logico: isola la parte utile dal byte 24 in poi\n\
+      \                    raw_payload = payload_bytes[self.header_len:]\n       \
+      \             \n                    print(f\"HUB parser CH{self.channel} raw\
+      \ : {list(raw_payload)}\")\n                    # Costruzione PDU di uscita\
+      \ (solo payload)\n                    meta = pmt.make_dict()\n             \
+      \       data = pmt.init_u8vector(len(raw_payload), list(raw_payload))\n    \
+      \                \n                    # Pubblicazione del messaggio sulla porta\
+      \ out\n                    self.message_port_pub(pmt.intern(\"payload_out\"\
+      ), pmt.cons(meta, data))\n                        \n                except Exception\
+      \ as e:\n                    print(f\"errore parser: {e}\")\n              \
+      \      pass\n\n    def work(self, input_items, output_items):\n        return\
+      \ 0\n"
+    affinity: ''
+    alias: ''
+    channel: '4'
+    comment: ''
+    header_len: '24'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('PDU Payload Parser', 'pdu_payload_parser', [('header_len', '24'),
+      ('channel', '1')], [('pdu_in', 'message', 1)], [('payload_out', 'message', 1)],
+      '', ['channel', 'header_len'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 1556.0]
+    rotation: 180
+    state: true
+- name: epy_block_1_2_1_0_0_2_0
+  id: epy_block
+  parameters:
+    _source_code: "import pmt\nfrom gnuradio import gr\n\nclass pdu_payload_parser(gr.sync_block):\n\
+      \    def __init__(self, header_len=24, channel = 1):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"PDU Payload Parser\",\n            in_sig=None,\n\
+      \            out_sig=None\n        )\n        self.message_port_register_in(pmt.intern(\"\
+      pdu_in\"))\n        self.message_port_register_out(pmt.intern(\"payload_out\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"pdu_in\"), self.handle_pdu)\n\
+      \        self.header_len = header_len\n        self.channel = channel\n\n  \
+      \  def handle_pdu(self, msg):\n        # Estrazione del vettore dati (cdr) dalla\
+      \ PDU ricevuta\n        data_pmt = pmt.cdr(msg)\n        \n        if pmt.is_u8vector(data_pmt):\n\
+      \            payload_bytes = pmt.u8vector_elements(data_pmt)\n            \n\
+      \            # Controllo lunghezza: deve contenere almeno l'header (24 byte)\n\
+      \            if len(payload_bytes) > self.header_len:\n                try:\n\
+      \                    # Parsing logico: isola la parte utile dal byte 24 in poi\n\
+      \                    raw_payload = payload_bytes[self.header_len:]\n       \
+      \             \n                    print(f\"HUB parser CH{self.channel} raw\
+      \ : {list(raw_payload)}\")\n                    # Costruzione PDU di uscita\
+      \ (solo payload)\n                    meta = pmt.make_dict()\n             \
+      \       data = pmt.init_u8vector(len(raw_payload), list(raw_payload))\n    \
+      \                \n                    # Pubblicazione del messaggio sulla porta\
+      \ out\n                    self.message_port_pub(pmt.intern(\"payload_out\"\
+      ), pmt.cons(meta, data))\n                        \n                except Exception\
+      \ as e:\n                    print(f\"errore parser: {e}\")\n              \
+      \      pass\n\n    def work(self, input_items, output_items):\n        return\
+      \ 0\n"
+    affinity: ''
+    alias: ''
+    channel: '5'
+    comment: ''
+    header_len: '24'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('PDU Payload Parser', 'pdu_payload_parser', [('header_len', '24'),
+      ('channel', '1')], [('pdu_in', 'message', 1)], [('payload_out', 'message', 1)],
+      '', ['channel', 'header_len'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 1668.0]
+    rotation: 180
+    state: true
+- name: foo_packet_pad2_0
+  id: foo_packet_pad2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    delay: 'False'
+    delay_sec: '0.01'
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size * 10
+    pad_front: '500'
+    pad_tail: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [300.0, 480]
+    rotation: 270
+    state: enabled
+- name: foo_packet_pad2_0_0
+  id: foo_packet_pad2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    delay: 'False'
+    delay_sec: '0.01'
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size * 10
+    pad_front: '500'
+    pad_tail: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [440, 2148.0]
+    rotation: 0
+    state: enabled
+- name: freq_xlating_fir_filter_xxx_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: '1'
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [984, 612.0]
+    rotation: 0
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: setup_ch_f
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: '1'
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 2172.0]
+    rotation: 0
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: -setup_ch_f
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.low_pass(1, 10e6, 0.625e6, 0.1e6)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [968, 372.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: setup_ch_f
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.low_pass(1, 10e6, 0.625e6, 0.1e6)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 1988.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: ((1 - 1) * 1.666e6) - 4.166e6
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.root_raised_cosine(10.0, 10e6, 1e6, 0.35, 110)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 1156.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: ((2 - 1) * 1.666e6) - 4.166e6
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.root_raised_cosine(10.0, 10e6, 1e6, 0.35, 110)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 1268.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: 833e3
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.root_raised_cosine(10.0, 10e6, 1e6, 0.35, 110)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 1492.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: 2.5e6
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.root_raised_cosine(10.0, 10e6, 1e6, 0.35, 110)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 1604.0]
+    rotation: 180
+    state: true
+- name: freq_xlating_fir_filter_xxx_0_1_0_0_0_1
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: -833e3
+    comment: ''
+    decim: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: firdes.root_raised_cosine(10.0, 10e6, 1e6, 0.35, 110)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 1380.0]
+    rotation: 180
+    state: true
+- name: ieee802_11_mac_0
+  id: ieee802_11_mac
+  parameters:
+    affinity: ''
+    alias: ''
+    bss_mac: '[0xff, 0xff, 0xff, 0xff, 0xff, 0xff]'
+    comment: ''
+    dst_mac: '[0xff,0xff, 0xff, 0xff, 0xff, 0xff]'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    src_mac: '[ID, ID, ID, ID, ID, ID]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [616, 276.0]
+    rotation: 0
+    state: enabled
+- name: ieee802_11_mac_0_0
+  id: ieee802_11_mac
+  parameters:
+    affinity: ''
+    alias: ''
+    bss_mac: '[0xff, 0xff, 0xff, 0xff, 0xff, 0xff]'
+    comment: ''
+    dst_mac: '[0xff,0xff, 0xff, 0xff, 0xff, 0xff]'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    src_mac: '[0x10, 0x10, 0x10, 0x10, 0x10, 0x10]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [392, 1828.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: 625e3
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: 30e3
+    win: window.WIN_BLACKMAN
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [720, 572.0]
+    rotation: 0
+    state: true
+- name: qtgui_waterfall_sink_x_0
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'False'
+    type: complex
+    update_time: '0.10'
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1016, 972.0]
+    rotation: 0
+    state: true
+- name: qtgui_waterfall_sink_x_0_0
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'False'
+    type: complex
+    update_time: '0.10'
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1984, 892.0]
+    rotation: 0
+    state: true
+- name: rational_resampler_xxx_0
+  id: rational_resampler_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1'
+    fbw: '0'
+    interp: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    taps: '[]'
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 596.0]
+    rotation: 0
+    state: true
+- name: rational_resampler_xxx_0_0
+  id: rational_resampler_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1'
+    fbw: '0'
+    interp: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    taps: '[]'
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [632, 2156.0]
+    rotation: 0
+    state: true
+- name: wifi_phy_hier_0
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [656, 380.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 1996.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0_0
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 1164.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0_0_0
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 1276.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0_0_1
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 1388.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0_0_2
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 1500.0]
+    rotation: 180
+    state: enabled
+- name: wifi_phy_hier_0_0_0_2_0
+  id: wifi_phy_hier
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 1.25e6
+    chan_est: ieee802_11.LS
+    comment: ''
+    encoding: '0'
+    frequency: freq
+    maxoutbuf: '0'
+    minoutbuf: out_buf_size
+    sensitivity: '0.56'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 1612.0]
+    rotation: 180
+    state: enabled
+
+connections:
+- [blocks_complex_to_mag_squared_0, '0', blocks_moving_average_xx_0, '0']
+- [blocks_moving_average_xx_0, '0', blocks_threshold_ff_0, '0']
+- [blocks_threshold_ff_0, '0', epy_block_1_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0_0, '0']
+- [blocks_throttle_0, '0', freq_xlating_fir_filter_xxx_0_1_0_0_0_1, '0']
+- [blocks_throttle_0, '0', qtgui_waterfall_sink_x_0_0, '0']
+- [channels_channel_model_0, '0', blocks_throttle_0, '0']
+- [channels_channel_model_0_0, '0', freq_xlating_fir_filter_xxx_0_1_0, '0']
+- [epy_block_0, out, epy_block_1_0_0, payload_in]
+- [epy_block_1_0, pdu_out, ieee802_11_mac_0_0, app in]
+- [epy_block_1_0_0, freq_out, freq_xlating_fir_filter_xxx_0, freq]
+- [epy_block_1_0_0, pdu_out, ieee802_11_mac_0, app in]
+- [foo_packet_pad2_0, '0', rational_resampler_xxx_0, '0']
+- [foo_packet_pad2_0_0, '0', rational_resampler_xxx_0_0, '0']
+- [freq_xlating_fir_filter_xxx_0, '0', channels_channel_model_0, '0']
+- [freq_xlating_fir_filter_xxx_0_0, '0', channels_channel_model_0_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0, '0', blocks_complex_to_mag_squared_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0, '0', wifi_phy_hier_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0, '0', wifi_phy_hier_0_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0, '0', wifi_phy_hier_0_0_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0_0, '0', qtgui_waterfall_sink_x_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0_0, '0', wifi_phy_hier_0_0_0_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0, '0', wifi_phy_hier_0_0_0_2, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0_0_0_0, '0', wifi_phy_hier_0_0_0_2_0, '0']
+- [freq_xlating_fir_filter_xxx_0_1_0_0_0_1, '0', wifi_phy_hier_0_0_0_1, '0']
+- [ieee802_11_mac_0, phy out, wifi_phy_hier_0, mac_in]
+- [ieee802_11_mac_0_0, phy out, wifi_phy_hier_0_0, mac_in]
+- [low_pass_filter_0, '0', freq_xlating_fir_filter_xxx_0, '0']
+- [rational_resampler_xxx_0, '0', low_pass_filter_0, '0']
+- [rational_resampler_xxx_0_0, '0', freq_xlating_fir_filter_xxx_0_0, '0']
+- [wifi_phy_hier_0, '0', foo_packet_pad2_0, '0']
+- [wifi_phy_hier_0, mac_out, epy_block_1_0_0, pdu_in]
+- [wifi_phy_hier_0_0, '0', foo_packet_pad2_0_0, '0']
+- [wifi_phy_hier_0_0, mac_out, epy_block_1_0, pdu_in]
+- [wifi_phy_hier_0_0_0, '0', blocks_null_sink_0, '0']
+- [wifi_phy_hier_0_0_0, mac_out, epy_block_1_2_1_0_0_1, pdu_in]
+- [wifi_phy_hier_0_0_0_0, '0', blocks_null_sink_0_1, '0']
+- [wifi_phy_hier_0_0_0_0, mac_out, epy_block_1_2_1_0_0_0, pdu_in]
+- [wifi_phy_hier_0_0_0_1, '0', blocks_null_sink_0_0, '0']
+- [wifi_phy_hier_0_0_0_1, mac_out, epy_block_1_2_1_0_0, pdu_in]
+- [wifi_phy_hier_0_0_0_2, '0', blocks_null_sink_0_1_0, '0']
+- [wifi_phy_hier_0_0_0_2, mac_out, epy_block_1_2_1_0_0_2, pdu_in]
+- [wifi_phy_hier_0_0_0_2_0, '0', blocks_null_sink_0_0_0, '0']
+- [wifi_phy_hier_0_0_0_2_0, mac_out, epy_block_1_2_1_0_0_2_0, pdu_in]
+
+metadata:
+  file_format: 1
