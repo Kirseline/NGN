@@ -224,4 +224,7 @@ HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
 [4] SENSORE 1 f 833000.0 TX raw [0, 86, 4, 34, 51, 68, 0]
 HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
 [4] SENSORE 1 f 833000.0 TX raw [0, 35, 4, 1, 2, 3, 0]
+
+<img width="2826" height="876" alt="image" src="https://github.com/user-attachments/assets/c1dbd854-7f3a-4268-8a83-7db27cfffec3" />
+
 HUB parser CH3 raw : [0, 35, 4, 1, 2, 3, 0]
