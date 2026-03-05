@@ -204,6 +204,12 @@ if self.free_channels:
     self._send_reply(reply_str)
 ```
 
+# TEST
+esempio di setup di test. Da destra: trasmettitore CAN, scheda di conversione CAN-UART, computer con GNU RADIO
+
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/eebd52b6-af90-401d-b79c-5587b01aaf39" />
+
+### Esempio di log su terminale del sistema
 
 [#] Parser Seriale CAN avviato su /dev/ttyACM0
 [1] SENSORE 1 f -4167000.0 CCA libero - TX REQ 1/5
@@ -225,6 +231,9 @@ HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
 HUB parser CH3 raw : [0, 86, 4, 34, 51, 68, 0]
 [4] SENSORE 1 f 833000.0 TX raw [0, 35, 4, 1, 2, 3, 0]
 
+### Esempio waterfall sul canale di trasmissione del sensore
 <img width="2826" height="876" alt="image" src="https://github.com/user-attachments/assets/c1dbd854-7f3a-4268-8a83-7db27cfffec3" />
 
-HUB parser CH3 raw : [0, 35, 4, 1, 2, 3, 0]
+si nota in alto a destra la prima fase di negoziazione e la successiva assegnazione sul canale 3
+
+
